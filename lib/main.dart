@@ -4,7 +4,7 @@ import 'package:movie_setup_app/Colors.dart';
 import 'package:movie_setup_app/Screen/HomeScreen.dart';
 
 void main(){
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Colours.scaffoldBgColor,
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }

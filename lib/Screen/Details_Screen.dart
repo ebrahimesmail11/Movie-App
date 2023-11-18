@@ -14,7 +14,7 @@ class DetailsScreen extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar.large(
-            leading: backButton(),
+            leading: const backButton(),
             backgroundColor: Colours.scaffoldBgColor,
             expandedHeight: 500,
             pinned: true,
@@ -22,15 +22,15 @@ class DetailsScreen extends StatelessWidget {
             flexibleSpace: FlexibleSpaceBar(
               // titlePadding: EdgeInsets.only(right: 20,bottom: 20,left: 16),
               background: ClipRRect(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(24),
-                  bottomRight: Radius.circular(24),
-                ),
+                  borderRadius: const BorderRadius.only(
+                    bottomLeft: Radius.circular(24),
+                    bottomRight: Radius.circular(24),
+                  ),
                   child: Image.network(
-                '${Constants.imagePath}${DtMovie.posterPath}',
-                filterQuality: FilterQuality.high,
-                fit: BoxFit.fill,
-              )),
+                    '${Constants.imagePath}${DtMovie.posterPath}',
+                    filterQuality: FilterQuality.high,
+                    fit: BoxFit.fill,
+                  )),
               title: Text(
                 DtMovie.title,
                 style: GoogleFonts.belleza(
@@ -40,43 +40,73 @@ class DetailsScreen extends StatelessWidget {
           ),
           SliverToBoxAdapter(
             child: Padding(
-              padding: EdgeInsets.all(12),
+              padding: const EdgeInsets.all(12),
               child: Column(
-
                 children: [
-                  Text('OverView',style: GoogleFonts.openSans(fontSize: 27,fontWeight: FontWeight.w800),),
-                  SizedBox(height: 15,),
-                  Text(DtMovie.overview,style: GoogleFonts.roboto(fontSize: 25,fontWeight: FontWeight.w400),),
-                  SizedBox(height: 16,),
+                  Text(
+                    'OverView',
+                    style: GoogleFonts.openSans(
+                        fontSize: 27, fontWeight: FontWeight.w800),
+                  ),
+                  const SizedBox(
+                    height: 15,
+                  ),
+                  Text(
+                    DtMovie.overview,
+                    style: GoogleFonts.roboto(
+                        fontSize: 25, fontWeight: FontWeight.w400),
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(10),
                         ),
                         child: Row(
                           children: [
-                            Text('Release data: ',style: GoogleFonts.roboto(fontSize: 17,fontWeight: FontWeight.bold),),
-                            Text(DtMovie.releaseDate,style: GoogleFonts.roboto(fontSize: 17,fontWeight: FontWeight.bold),),
+                            Text(
+                              'Release data: ',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            Text(
+                              DtMovie.releaseDate,
+                              style: GoogleFonts.roboto(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
                           ],
                         ),
                       ),
                       Container(
-                        padding: EdgeInsets.all(8),
+                        padding: const EdgeInsets.all(8),
                         decoration: BoxDecoration(
                           border: Border.all(color: Colors.grey),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                         child: Row(
+                        child: Row(
                           children: [
-                            Text('Rating:',style: GoogleFonts.roboto(fontSize: 17,fontWeight: FontWeight.bold),),
-                            Icon(Icons.star,color: Colors.amber,),
-                             Text('${DtMovie.voteAverage.toStringAsFixed(1)}\n/10',style: GoogleFonts.roboto(fontSize: 10,fontWeight: FontWeight.bold),),
-                           ],
-                         ),
+                            Text(
+                              'Rating:',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            const Icon(
+                              Icons.star,
+                              color: Colors.amber,
+                            ),
+                             Text(
+                              '${DtMovie.voteAverage.toStringAsFixed(1)}\n/10',
+                              style: GoogleFonts.roboto(
+                                  fontSize: 10, fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),

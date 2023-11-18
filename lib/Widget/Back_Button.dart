@@ -9,7 +9,7 @@ class backButton extends StatelessWidget {
     return Container(
       height: 70,
       width: 70,
-      margin: EdgeInsets.only(top: 16, left: 16),
+      margin: const EdgeInsets.only(top: 16, left: 16),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
         color: Colours.scaffoldBgColor,
@@ -18,7 +18,7 @@ class backButton extends StatelessWidget {
         onPressed: () {
           Navigator.pop(context);
         },
-        icon: Icon(Icons.arrow_back_rounded),
+        icon: const Icon(Icons.arrow_back_rounded),
       ),
     );
   }

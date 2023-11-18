@@ -11,7 +11,7 @@ final AsyncSnapshot snapshot;
       height: 200,
       width: double.infinity,
       child: ListView.builder(
-        physics: BouncingScrollPhysics(),
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemCount: snapshot.data!.length,
         itemBuilder: (context,index){
